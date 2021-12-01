@@ -6,7 +6,7 @@ import NewsFeed from './components/Newsfeed/NewsFeed';
 class App extends Component{
   state = {
     show : false,
-    toggle : false
+    toggle : true
   }
 
   ModalHandler = () => {
@@ -23,10 +23,10 @@ class App extends Component{
     const temp = this.state.toggle;
 
     if(num === 2 && temp === false){
-      this.setState({toggle : !temp})
+      this.setState({toggle : true})
     }
     else if(num === 1 && temp === true){
-      this.setState({toggle : !temp})
+      this.setState({toggle : false})
     }
   }
 
@@ -37,7 +37,9 @@ class App extends Component{
           show = {this.state.show}
           BackDropHandler = {() => this.BackDropHandler()}
           ModalHandler = {() => this.ModalHandler()}
-          ToggleHandler = {(num) => this.toggleHandler(num)}/>
+          ToggleHandler = {(num) => this.toggleHandler(num)}
+          toggle = {this.state.toggle}/>
+
         <NewsFeed toggle = {this.state.toggle}/>
       </div>
     )

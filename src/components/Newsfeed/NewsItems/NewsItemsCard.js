@@ -13,7 +13,6 @@ const newsItemsCard = (props) => {
         
     const content = props.newsItemList.body.slice(0, 75) + '...';
 
-    console.log(props.newsItemList.title)
     return(
         <div className = {classes.Maincontainer}>
             <div className = {classes.Container}>

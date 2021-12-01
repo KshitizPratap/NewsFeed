@@ -13,10 +13,12 @@ const toggle = (props) => {
         <div className = {Toggle}>
             <h2>View Toggle</h2>
             <div className = {classes.ToggleButton}>
-                <a style = {{backgroundColor : 'blue'}}
-                    onClick = {() => props.ToggleHandler(1)}>Col</a>
-                <a style = {{backgroundColor : 'blue'}}
-                    onClick = {() => props.ToggleHandler(2)}>List</a>
+                <p 
+                    onClick = {() => props.ToggleHandler(1)}
+                    style = {{backgroundColor : props.toggle ? "transparent" : "greenyellow"}}>Col</p>
+                <p 
+                    style = {{backgroundColor : props.toggle ? "greenyellow" : "transparent"}}
+                    onClick = {() => props.ToggleHandler(2)}>List</p>
             </div>
         </div>
     );

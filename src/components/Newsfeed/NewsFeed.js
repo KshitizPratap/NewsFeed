@@ -16,21 +16,20 @@ class NewsFeed extends Component{
             })
 
         let arr = [];
-        for(let i=0;i<=15; i++)
+        for(let i=0;i<=50; i++)
             arr[i] = true;
 
         this.setState({toShow : arr})
     }
 
-    // ItemHandler = (id) => {
-    //     let arr = [...this.state.toShow];
-    //     arr[id] = false;
+    ItemHandler = (id) => {
+        let arr = [...this.state.toShow];
+        arr[id] = false;
 
-    //     this.setState({toShow : arr});
-    // }
+        this.setState({toShow : arr});
+    }
 
     render(){
-        console.log(this.state.toShow)
         let news = null;
         
         if(this.props.toggle)
@@ -38,9 +37,10 @@ class NewsFeed extends Component{
             news = this.state.news.map(newsList => {
                     return <NewsItemsList newsItemList = {newsList}
                         key = {newsList.id}
-                        // onClick = {() => this.List(newsList.id)}
+                        onClick = {() => this.List(newsList.id)}
                         ItemHandler = {() => this.ItemHandler(newsList.id)} 
-                        show = {this.state.toShow[newsList.id]}/>
+                        show = {this.state.toShow[newsList.id]}
+                        />
             })
         }
 
