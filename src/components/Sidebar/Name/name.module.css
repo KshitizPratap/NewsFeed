@@ -1,0 +1,32 @@
+.Container{
+    display: flex;
+    flex-flow: row;
+    background-color: white;
+    width: 80%;
+    margin-top: 4rem;
+    border-radius: 7px;
+    box-shadow: 1px 1px 15px rgba(209, 206, 206, 0.37);
+}
+
+.Container img{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+h4, p{
+    margin: 0;
+}
+
+.Heading{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Heading p{
+    font-size: small;
+}

@@ -1,0 +1,48 @@
+.MainContainer{
+    display: flex;
+    align-items: center;
+}
+
+.NoDisplay{
+    display: none;
+}
+
+.Container{
+    background-color: white;
+    /* background-color: aqua; */
+    border-radius:10px;
+    margin-top: 0.5rem;
+    padding: 15px 30px 20px 30px;
+    cursor: pointer;
+}
+
+.Container h5, p{
+    margin: 0;
+    padding: 0;
+}
+
+.Container h5:hover{
+    text-decoration: underline;
+}
+
+.ImgContainer{
+    height: 35px;
+    width: 35px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 35px;
+    margin-left: 5px;
+    box-shadow: 5px 5px 20px white;
+    cursor: pointer;
+}
+
+.ImgContainer:hover{
+    box-shadow: 5px 5px 10px white;
+    height: 37px;
+    width: 37px;
+}
+
+.ImgContainer img{
+    height: 35px;
+    width: 35px;
+}

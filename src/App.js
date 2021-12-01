@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import Sidebar from './components/Sidebar/sidebar'
+import classes from './App.module.css'
+import NewsFeed from './components/Newsfeed/NewsFeed';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  state = {
+    show : false,
+    toggle : false
+  }
+
+  ModalHandler = () => {
+    const temp = this.state.show
+    this.setState({show : !temp})
+  }
+
+  BackDropHandler = () => {
+    const temp = false;
+    this.setState({show : temp});
+  }
+
+  toggleHandler = (num) => {
+    const temp = this.state.toggle;
+
+    if(num === 2 && temp === false){
+      this.setState({toggle : !temp})
+    }
+    else if(num === 1 && temp === true){
+      this.setState({toggle : !temp})
+    }
+  }
+
+  render(){
+    return(
+      <div className = {classes.Container}>
+        <Sidebar 
+          show = {this.state.show}
+          BackDropHandler = {() => this.BackDropHandler()}
+          ModalHandler = {() => this.ModalHandler()}
+          ToggleHandler = {(num) => this.toggleHandler(num)}/>
+        <NewsFeed toggle = {this.state.toggle}/>
+      </div>
+    )
+  }
 }
 
 export default App;

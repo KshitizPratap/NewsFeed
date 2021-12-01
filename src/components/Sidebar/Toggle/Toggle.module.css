@@ -1,0 +1,32 @@
+.ToggleContainer{
+    background-color: white;
+    width: 80%;
+    margin-top: 1.5rem;
+    border-radius: 7px;
+    box-shadow: 1px 1px 15px rgba(209, 206, 206, 0.37);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.ToggleContainer h2{
+    margin: 0;
+    margin-top: 5px;
+}
+
+.ToggleButton{
+    width: 80%;
+    height: 5vh;
+    background-color: grey;
+    margin: 1rem 0;
+}
+a{
+    height: 5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.NoDisplay{
+    display: none;
+}

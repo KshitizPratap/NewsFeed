@@ -1,0 +1,18 @@
+.Maincontainer h5{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: medium;
+}
+.Maincontainer{
+     width: 10vw;
+     height: 30vh;
+     border-radius: 5px;
+     background-color: white;
+     padding: 20px;
+     /* background-color: chartreuse; */
+     margin: 0 1rem 3rem 0;
+}
+
+.Maincontainer p {
+    font-size: medium;
+}

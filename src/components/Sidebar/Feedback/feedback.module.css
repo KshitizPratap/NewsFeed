@@ -1,0 +1,38 @@
+.FeedbackContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    border-radius: 7px;
+    box-shadow: 1px 1px 15px rgba(209, 206, 206, 0.37);
+}
+
+.FeedbackContainer h2{
+    margin: 0;
+}
+
+.ListeningContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: aliceblue;
+    font-size: large;
+    padding: 0.7rem 0;
+    margin-top: 0.5rem;
+    font-weight: 500; 
+    border-radius: 7px;  
+    cursor: pointer; 
+}
+
+.BGGreen{
+    background-color: greenyellow;
+}
+
+.BGRed{
+    background-color: red;
+}
+

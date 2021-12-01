@@ -1,0 +1,18 @@
+.NewsContainer{
+    padding: 3.5rem 2rem 0 3rem;
+    width: 100%;
+    background-color: rgb(219, 212, 212);
+    overflow: auto;
+}
+
+.NewsContainer h1{
+    margin-top: 0.4rem;
+    margin-left: 0.5rem;
+}
+
+.News{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
