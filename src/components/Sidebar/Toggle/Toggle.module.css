@@ -12,13 +12,13 @@
 
 .ToggleContainer h2{
     margin: 0;
-    margin-top: 5px;
+    margin-top: 0.7rem;
 }
 
 .ToggleButton{
     width: 78%;
     height: 7vh;
-    background-color: rgb(206, 205, 205);
+    background-color: rgb(173, 222, 245);
     border-radius: 5px;
     margin: 1rem 0;
     display: flex;
@@ -32,6 +32,8 @@
     height:100%;
     width: 50%;
     border-radius: 5px;
+    font-size: larger;
+    font-weight: 450;
 }
 
 .NoDisplay{

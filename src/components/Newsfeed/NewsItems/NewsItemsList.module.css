@@ -1,6 +1,9 @@
 .MainContainer{
     display: flex;
     align-items: center;
+    width: 100%;
+    /* background-color: aqua; */
+    /* height: 15vh; */
 }
 
 .NoDisplay{
@@ -9,7 +12,8 @@
 
 .Container{
     background-color: white;
-    /* background-color: aqua; */
+    width: 90%;
+    height: 8.5vh;
     border-radius:10px;
     margin-top: 0.5rem;
     padding: 15px 30px 20px 30px;
@@ -36,7 +40,7 @@
 }
 
 .ImgContainer:hover{
-    box-shadow: 5px 5px 10px white;
+    box-shadow: 1px 1px 5px white;
     height: 37px;
     width: 37px;
 }
