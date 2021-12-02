@@ -48,9 +48,9 @@ class NewsFeed extends Component{
             news = this.state.news.map(newsList => {
                 return <NewsItemsCard newsItemList = {newsList}
                         key = {newsList.id}
-                        // onClick = {() => this.List(newsList.id)}
-                        // ItemHandler = {() => this.ItemHandler(newsList.id)} 
-                        // show = {this.state.toShow[newsList.id]}
+                        onClick = {() => this.List(newsList.id)}
+                        ItemHandler = {() => this.ItemHandler(newsList.id)} 
+                        show = {this.state.toShow[newsList.id]}
                         />
             })
         }

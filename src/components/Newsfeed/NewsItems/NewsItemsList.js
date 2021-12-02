@@ -17,4 +17,5 @@ const newsItemList = (props) => {
     );
 }
 
+
 export default newsItemList;

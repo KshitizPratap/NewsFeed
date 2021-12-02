@@ -16,7 +16,7 @@ const toggle = (props) => {
                 <p 
                     onClick = {() => props.ToggleHandler(1)}
                     style = {{backgroundColor : props.toggle ? "transparent" : "rgb(16, 18, 48)",
-                              color : props.toggle ? "rgb(16, 18, 48)" : "white"}}>Col</p>
+                              color : props.toggle ? "rgb(16, 18, 48)" : "white"}}>Card</p>
                 <p 
                     style = {{backgroundColor : props.toggle ? "rgb(16, 18, 48)" : "transparent",
                               color : props.toggle ? "white" : "rgb(16, 18, 48)"}}
