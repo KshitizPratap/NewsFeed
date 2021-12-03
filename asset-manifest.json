@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/NewsFeed/static/css/main.e05cebcc.chunk.css",
+    "main.js": "/NewsFeed/static/js/main.cc8395d1.chunk.js",
+    "main.js.map": "/NewsFeed/static/js/main.cc8395d1.chunk.js.map",
+    "runtime-main.js": "/NewsFeed/static/js/runtime-main.5af948b6.js",
+    "runtime-main.js.map": "/NewsFeed/static/js/runtime-main.5af948b6.js.map",
+    "static/js/2.9838584b.chunk.js": "/NewsFeed/static/js/2.9838584b.chunk.js",
+    "static/js/2.9838584b.chunk.js.map": "/NewsFeed/static/js/2.9838584b.chunk.js.map",
+    "static/js/3.7cec6226.chunk.js": "/NewsFeed/static/js/3.7cec6226.chunk.js",
+    "static/js/3.7cec6226.chunk.js.map": "/NewsFeed/static/js/3.7cec6226.chunk.js.map",
+    "index.html": "/NewsFeed/index.html",
+    "static/css/main.e05cebcc.chunk.css.map": "/NewsFeed/static/css/main.e05cebcc.chunk.css.map",
+    "static/js/2.9838584b.chunk.js.LICENSE.txt": "/NewsFeed/static/js/2.9838584b.chunk.js.LICENSE.txt",
+    "static/media/profile.c78fe6a8.jpg": "/NewsFeed/static/media/profile.c78fe6a8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5af948b6.js",
+    "static/js/2.9838584b.chunk.js",
+    "static/css/main.e05cebcc.chunk.css",
+    "static/js/main.cc8395d1.chunk.js"
+  ]
+}
