@@ -6,14 +6,14 @@ const newsItemsCard = (props) => {
 
     let heading = null
     if(props.newsItemList.title.length > 15){
-        heading = props.newsItemList.title.slice(0, 15) + '...'
+        heading = props.newsItemList.title.slice(0, 15) + '...';
     }
     else{
         heading = props.newsItemList.title;
     }
         
-    const content = props.newsItemList.body.slice(0, 75) + '...';
-
+    const content = props.newsItemList.body.slice(0, 60) + '...';
+    
     return(
         <div className = {props.show ? classes.Maincontainer : classes.NoDisplay}>
             <div 

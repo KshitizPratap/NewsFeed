@@ -6,7 +6,7 @@ import NewsFeed from './components/Newsfeed/NewsFeed';
 class App extends Component{
   state = {
     show : false,
-    toggle : true
+    toggle : false
   }
 
   ModalHandler = () => {

@@ -5,7 +5,8 @@
     top: 0;
     left: 0;
     /* background-color: rgba(104, 104, 104, 0.603); */
-    background-color: rgba(0, 0, 0, 0.658);
+    background-color: rgba(0, 0, 0, 0.678);
+    z-index: 2;
 }
 
 .NoDisplay{

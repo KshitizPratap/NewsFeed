@@ -1,25 +1,41 @@
 import React, { Component } from "react";
 import classes from './NewsFeed.module.css'
-import axios from "axios";
-import NewsItemsList from './NewsItems/NewsItemsList'
+import axios from "../../axios";
+
+import NewsItemsList from './NewsItems/NewsItemsList';
 import NewsItemsCard from "./NewsItems/NewsItemsCard";
 
 class NewsFeed extends Component{
     state = {
         news : [],
-        toShow : []
+        toShow : [],
+        start : 0,
+        update : false
     }
-    componentDidMount(){
-        axios.get("https://jsonplaceholder.typicode.com/posts")
+    
+    componentDidUpdate(){
+        console.log("[Start] " + this.state.start)
+
+        if(this.state.update){
+            axios.get("/posts?_start=" + this.state.start + "&_limit=20")
             .then(response => {
-                this.setState({news : response.data})
+                const s = this.state.start + 10;
+                let arr = [...this.state.news, ...response.data];
+
+                this.setState({news : arr, update : false, start : s})
+                
+            })
+        }
+    }
+
+    componentDidMount(){
+        axios.get("/posts?_start=" + this.state.start + "&_limit=20")
+            .then(response => {
+                const s = this.state.start + 10
+                this.setState({news : response.data, start : s})
             })
 
-        let arr = [];
-        for(let i=0;i<=50; i++)
-            arr[i] = true;
-
-        this.setState({toShow : arr})
+        this.setState({toShow : Array(101).fill(true)})
     }
 
     ItemHandler = (id) => {
@@ -29,18 +45,24 @@ class NewsFeed extends Component{
         this.setState({toShow : arr});
     }
 
+    fetchMore = (event) => {
+        const check = (event.target.scrollHeight - event.target.scrollTop) <= (event.target.clientHeight);
+
+        if(check){
+            this.setState({update : true});
+        }
+    }
+
     render(){
+        console.log(this.state.news)
         let news = null;
         
-        if(this.props.toggle)
-        {
+        if(this.props.toggle){
             news = this.state.news.map(newsList => {
                     return <NewsItemsList newsItemList = {newsList}
                         key = {newsList.id}
-                        onClick = {() => this.List(newsList.id)}
                         ItemHandler = {() => this.ItemHandler(newsList.id)} 
-                        show = {this.state.toShow[newsList.id]}
-                        />
+                        show = {this.state.toShow[newsList.id]}/>
             })
         }
 
@@ -48,15 +70,13 @@ class NewsFeed extends Component{
             news = this.state.news.map(newsList => {
                 return <NewsItemsCard newsItemList = {newsList}
                         key = {newsList.id}
-                        onClick = {() => this.List(newsList.id)}
-                        ItemHandler = {() => this.ItemHandler(newsList.id)} 
                         show = {this.state.toShow[newsList.id]}
-                        />
+                        ItemHandler = {() => this.ItemHandler(newsList.id)} />
             })
         }
 
         return(
-            <div className = {classes.NewsContainer}>
+            <div className = {classes.NewsContainer} onScroll = {this.fetchMore}>
                 <h1>Here's your news</h1>
                 <div className = {classes.News}>
                     {news}
