@@ -16,7 +16,7 @@ class NewsFeed extends Component{
     componentDidUpdate(){
         console.log("[Start] " + this.state.start)
 
-        if(this.state.update){
+        if(this.state.update && this.state.start < 100){
             axios.get("/posts?_start=" + this.state.start + "&_limit=20")
             .then(response => {
                 const s = this.state.start + 20;
