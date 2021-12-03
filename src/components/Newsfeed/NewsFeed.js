@@ -19,7 +19,7 @@ class NewsFeed extends Component{
         if(this.state.update){
             axios.get("/posts?_start=" + this.state.start + "&_limit=20")
             .then(response => {
-                const s = this.state.start + 10;
+                const s = this.state.start + 20;
                 let arr = [...this.state.news, ...response.data];
 
                 this.setState({news : arr, update : false, start : s})
@@ -31,7 +31,7 @@ class NewsFeed extends Component{
     componentDidMount(){
         axios.get("/posts?_start=" + this.state.start + "&_limit=20")
             .then(response => {
-                const s = this.state.start + 10
+                const s = this.state.start + 20
                 this.setState({news : response.data, start : s})
             })
 
