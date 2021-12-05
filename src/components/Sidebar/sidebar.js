@@ -13,9 +13,11 @@ const sidebar = (props) => {
                 BackDropHandler = {props.BackDropHandler}/>
             <div className = {classes.Container}>
                 <Name />
-                <Toggle show = {props.show}
-                    ToggleHandler = {(num) => props.ToggleHandler(num)}
-                    toggle = {props.toggle}/>
+
+                {props.show ? null : <Toggle
+                                    ToggleHandler = {(num) => props.ToggleHandler(num)}
+                                    toggle = {props.toggle}/>}
+
                 <Feedback 
                     show = {props.show}
                     ModalHandler = {props.ModalHandler}/>

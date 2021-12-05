@@ -2,15 +2,9 @@ import React from "react";
 import classes from './Toggle.module.css'
 
 const toggle = (props) => {
-    // let Toggle = classes.ToggleContainer
-
-    // if(props.show)
-    // {
-    //     Toggle = classes.NoDisplay
-    // }
 
     return(
-        <div className = {props.show ? classes.NoDisplay : classes.ToggleContainer}>
+        <div className = {classes.ToggleContainer}>
             <h2>View Toggle</h2>
             <div className = {classes.ToggleButton}>
                 <p 
